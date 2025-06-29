@@ -1,0 +1,74 @@
+
+body {
+  background: linear-gradient(to bottom right, hwb(323 58% 9%), hsl(0, 42%, 91%));
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+h1 {
+  color: white; /* 🔧 Fixed: Now bold white */
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  animation: floatHeadline 3s ease-in-out infinite;
+}
+
+@keyframes floatHeadline {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+.news-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+
+.news-card {
+  background: lab(89.04% 4.1 1.46);
+  border: 1px solid #4444444c;
+  border-radius: 12px;
+  padding: 1rem;
+  color: rgb(9, 8, 8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(26, 13, 13, 0.081);
+}
+
+.news-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(30, 27, 27, 0.036);
+}
+
+
+.news-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black; /* ✅ Black bold for article titles */
+  margin-bottom: 0.5rem;
+}
+
+
+.news-card p {
+  color: hsl(0, 4%, 5%);
+  font-size: 0.95rem;
+}
+
+
+.news-card a {
+  color: #ffd54f;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.news-card a:hover {
+  color: #fff176;
+}
